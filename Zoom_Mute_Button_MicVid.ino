@@ -15,17 +15,24 @@ void setup() {
   // put your setup code here, to run once:
 
   //set up button functions
-
   button1.attachClick(click1);
   button2.attachClick(click2);
 
   DigiKeyboard.sendKeyStroke(0);
   DigiKeyboard.delay(500);
-  
+
+  // set up LED pin modes
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+
+  // turn on console LEDs
+  digitalWrite(4, HIGH);
+  digitalWrite(5, HIGH);
+  
   //monitor buttons
   button1.tick();
   button2.tick();
