@@ -20,19 +20,11 @@ void setup() {
 
   DigiKeyboard.sendKeyStroke(0);
   DigiKeyboard.delay(500);
-
-  // set up LED pin modes
-  pinMode(4, OUTPUT);
-  pinMode(5, OUTPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
 
-  // turn on console LEDs
-  digitalWrite(4, HIGH);
-  digitalWrite(5, HIGH);
-  
   //monitor buttons
   button1.tick();
   button2.tick();
